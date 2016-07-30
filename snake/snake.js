@@ -5,19 +5,22 @@ var gameTimer;
 var gameTime = 0;
 var timerText;
 
+var WIDTH = window.innerWidth;
+var HEIGHT = window.innerHeight;
+
 window.onload = function()
 {
     var canvas = document.getElementById('canvas');
     context = canvas.getContext('2d');
-    context.canvas.width = 800;
-    context.canvas.height = 600;
+    context.canvas.width = WIDTH;
+    context.canvas.height = HEIGHT;
     stage = new createjs.Stage("canvas");
 
     queue = new createjs.LoadQueue(false);
     queue.on("complete", queueLoaded, this);
 
     queue.loadManifest([
-        {id: 'background', src: 'assets/background.png'},
+        {id: 'background', src: 'snake/assets/background.png'},
     ]);
     queue.load();
 
@@ -27,6 +30,8 @@ window.onload = function()
 function queueLoaded(event)
 {
     var background = new createjs.Bitmap(queue.getResult("background"));
+    background.x = 800 - WIDTH;
+    background.y = 600 - HEIGHT;
     stage.addChild(background);
 
     timerText = new createjs.Text("Time: " + gameTime.toString(), "36px Arial", "#FFF");
@@ -36,7 +41,6 @@ function queueLoaded(event)
 
     createjs.Ticker.setFPS(30);
     createjs.Ticker.addEventListener('tick', stage);
-    createjs.Ticker.addEventListener('tick', tickEvent);
 }
 
 function updateTime()
