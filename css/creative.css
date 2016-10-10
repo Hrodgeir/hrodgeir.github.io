@@ -16,7 +16,7 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #004274;
+    border-color: white;
     border-width: 3px;
 }
 
@@ -178,7 +178,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/background.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -195,8 +195,7 @@ header .header-content {
 
 header .header-content .header-content-inner h1 {
     margin-top: 0;
-    margin-bottom: 0;
-    text-transform: uppercase;
+    margin-bottom: 20px;
     font-weight: 700;
 }
 
@@ -205,10 +204,15 @@ header .header-content .header-content-inner hr {
 }
 
 header .header-content .header-content-inner p {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-size: 16px;
     font-weight: 300;
-    color: rgba(255,255,255,.7);
+    color: rgba(255,255,255);
+}
+
+header .header-content .header-content-inner a {
+    margin-right: 25px;
+    margin-left: 25px;
 }
 
 @media(min-width:768px) {
@@ -402,6 +406,7 @@ fieldset[disabled] .btn-default.active {
     border-color: #0065b3;
     color: #fff;
     background-color: #0074cc;
+    border: 2px solid white;
 }
 
 .btn-primary:active,
@@ -440,7 +445,6 @@ fieldset[disabled] .btn-primary.active {
 .btn {
     border: 0;
     border-radius: 300px;
-    text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
 }
@@ -473,4 +477,74 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+
+/* Custom Created CSS */
+.btn-white-border {
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+
+.img-circle {
+    max-width: 100%;
+    border: 3px solid rgba(255, 255, 255, 1);
+}
+
+.about {
+    margin-bottom: 5px;
+}
+
+.about-left {
+    width: 100%;
+    margin-top: 25px;
+    text-align: right;
+}
+
+.about-mid {
+    text-align: center;
+}
+
+.about-right {
+    width: 100%;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.bg-projects {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url(../img/projects.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.work-image {
+    position: relative;
+    height: 75px;
+    margin-top: 7px;
+    left: 5px;
+}
+
+.work-content {
+    position: relative;
+    top: -85px;
+}
+
+.work-block .content{
+    margin: 0 0 0 8em;
+}
+
+.work-block {
+    line-height: 1.2;
+    text-align: left;
+}
+
+.work-xp {
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
