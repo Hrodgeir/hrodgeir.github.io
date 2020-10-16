@@ -451,6 +451,7 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-xl {
     padding: 15px 30px;
+	margin-bottom: 20px;
 }
 
 ::-moz-selection {
